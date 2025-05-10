@@ -15,11 +15,18 @@ const CTASection = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">
               Ready to Create Your Meme Coin?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 mb-4 max-w-2xl mx-auto">
               Join hundreds of creators who've successfully launched their meme coins on the Solana blockchain
             </p>
-            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white">
-              Get Started Today
+            <p className="text-lg text-purple-300 mb-8 max-w-2xl mx-auto">
+              Your coin will be available on all trading platforms
+            </p>
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white"
+              onClick={() => alert("Please verify sending fees before continuing")}
+            >
+              Verify Sending Fees to Start
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>

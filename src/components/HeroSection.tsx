@@ -15,13 +15,20 @@ const HeroSection = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gradient">
             Create Your Own Meme Coin in Minutes
           </h1>
-          <p className="text-xl mb-8 text-gray-300">
+          <p className="text-xl mb-4 text-gray-300">
             Launch your crypto project with professional-grade tools. 
             High accuracy, advanced tokenomics, and all services included.
           </p>
+          <p className="text-lg mb-8 text-purple-300">
+            Available on all major trading platforms
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white">
-              Create Your Coin
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white"
+              onClick={() => alert("Please verify sending fees before continuing")}
+            >
+              Verify Sending Fees to Start
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button size="lg" variant="outline" className="border-purple-500 text-purple-500 hover:text-purple-400 hover:border-purple-400">
