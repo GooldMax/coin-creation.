@@ -1,9 +1,12 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import PaymentDialog from './PaymentDialog';
 
 const HeroSection = () => {
+  const [paymentDialogOpen, setPaymentDialogOpen] = useState(false);
+
   return (
     <section className="pt-32 pb-20 bg-hero-pattern relative overflow-hidden">
       {/* Decorative elements */}
@@ -26,7 +29,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white"
-              onClick={() => alert("Please verify sending fees before continuing")}
+              onClick={() => setPaymentDialogOpen(true)}
             >
               Verify Sending Fees to Start
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -51,6 +54,12 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Payment Dialog */}
+      <PaymentDialog 
+        open={paymentDialogOpen} 
+        onOpenChange={setPaymentDialogOpen} 
+      />
     </section>
   );
 };

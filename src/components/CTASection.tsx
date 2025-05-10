@@ -1,9 +1,12 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import PaymentDialog from './PaymentDialog';
 
 const CTASection = () => {
+  const [paymentDialogOpen, setPaymentDialogOpen] = useState(false);
+
   return (
     <section className="py-20 bg-gradient-to-b from-purple-950/20 to-black relative">
       <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-900/20 rounded-full blur-3xl"></div>
@@ -24,7 +27,7 @@ const CTASection = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white"
-              onClick={() => alert("Please verify sending fees before continuing")}
+              onClick={() => setPaymentDialogOpen(true)}
             >
               Verify Sending Fees to Start
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -32,6 +35,12 @@ const CTASection = () => {
           </div>
         </div>
       </div>
+
+      {/* Payment Dialog */}
+      <PaymentDialog 
+        open={paymentDialogOpen} 
+        onOpenChange={setPaymentDialogOpen} 
+      />
     </section>
   );
 };
