@@ -22,8 +22,11 @@ const CTASection = () => {
             <p className="text-xl text-gray-300 mb-4 max-w-2xl mx-auto">
               Join hundreds of creators who've successfully launched their meme coins on the Solana blockchain
             </p>
-            <p className="text-lg text-purple-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-purple-300 mb-3 max-w-2xl mx-auto">
               Your coin will be available on all trading platforms
+            </p>
+            <p className="text-lg text-purple-300 mb-8 max-w-2xl mx-auto">
+              View your token on SolScan immediately after deployment
             </p>
             <Button 
               size="lg" 
