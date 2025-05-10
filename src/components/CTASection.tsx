@@ -1,15 +1,11 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import PaymentDialog from './PaymentDialog';
 import Testimonials from './Testimonials';
-
 const CTASection = () => {
   const [paymentDialogOpen, setPaymentDialogOpen] = useState(false);
-
-  return (
-    <section className="py-20 bg-gradient-to-b from-purple-950/20 to-black relative">
+  return <section className="py-20 bg-gradient-to-b from-purple-950/20 to-black relative">
       <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-900/20 rounded-full blur-3xl"></div>
       <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-indigo-900/20 rounded-full blur-3xl"></div>
       
@@ -26,13 +22,8 @@ const CTASection = () => {
               Your coin will be available on all trading platforms
             </p>
             <p className="text-lg text-purple-300 mb-8 max-w-2xl mx-auto">
-              View your token on SolScan immediately after deployment
-            </p>
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white"
-              onClick={() => setPaymentDialogOpen(true)}
-            >
+          </p>
+            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white" onClick={() => setPaymentDialogOpen(true)}>
               Verify Sending Fees to Start
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -44,12 +35,7 @@ const CTASection = () => {
       </div>
 
       {/* Payment Dialog */}
-      <PaymentDialog 
-        open={paymentDialogOpen} 
-        onOpenChange={setPaymentDialogOpen} 
-      />
-    </section>
-  );
+      <PaymentDialog open={paymentDialogOpen} onOpenChange={setPaymentDialogOpen} />
+    </section>;
 };
-
 export default CTASection;
