@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import PaymentDialog from './PaymentDialog';
+import Testimonials from './Testimonials';
 
 const CTASection = () => {
   const [paymentDialogOpen, setPaymentDialogOpen] = useState(false);
@@ -33,6 +34,9 @@ const CTASection = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
+          
+          {/* Testimonials */}
+          <Testimonials />
         </div>
       </div>
 
