@@ -53,7 +53,7 @@ const PaymentDialog = ({ open, onOpenChange }: PaymentDialogProps) => {
         <DialogHeader>
           <DialogTitle className="text-2xl text-gradient">Daily Subscription Payment</DialogTitle>
           <DialogDescription className="text-gray-300">
-            Send 3 SOL to the address below to activate your daily subscription
+            Send 1.50 SOL to the address below to activate your daily subscription
           </DialogDescription>
         </DialogHeader>
         
@@ -67,9 +67,10 @@ const PaymentDialog = ({ open, onOpenChange }: PaymentDialogProps) => {
               </Button>
             </div>
             <div className="mt-4 space-y-2 text-sm text-gray-300">
-              <p>• Payment required: <span className="text-purple-300 font-semibold">3 SOL</span></p>
+              <p>• Payment required: <span className="text-purple-300 font-semibold">1.50 SOL</span> <span className="bg-amber-500/20 text-amber-300 text-xs px-2 py-0.5 rounded">Limited Offer!</span></p>
               <p>• Access duration: <span className="text-purple-300 font-semibold">24 hours</span></p>
               <p>• Unlocks all platform features and tools</p>
+              <p className="text-amber-300 text-xs italic mt-1">Price will return to 3 SOL after one day</p>
             </div>
           </div>
           

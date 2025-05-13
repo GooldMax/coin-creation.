@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Check } from 'lucide-react';
+import { Check, Clock } from 'lucide-react';
 
 const PricingSection = () => {
   const [showSubscriptionDetails, setShowSubscriptionDetails] = useState(false);
@@ -32,9 +32,13 @@ const PricingSection = () => {
             <div className="inline-block rounded-full bg-purple-500/20 px-4 py-1 text-sm text-purple-300 mb-4">
               Daily Subscription
             </div>
-            <div className="mb-4">
-              <span className="text-4xl font-bold text-white">3 SOL</span>
+            <div className="mb-2">
+              <span className="text-4xl font-bold text-white">1.50 SOL</span>
               <span className="text-gray-400 ml-2">/ day</span>
+            </div>
+            <div className="inline-flex items-center gap-1 mb-4 bg-amber-500/20 px-3 py-1 rounded-full">
+              <Clock className="h-3 w-3 text-amber-300" />
+              <span className="text-xs text-amber-300">Limited time offer! Returns to 3 SOL tomorrow</span>
             </div>
             <p className="text-gray-400 mb-6">
               Full access to all platform features and services
@@ -52,7 +56,7 @@ const PricingSection = () => {
               <div className="mb-6">
                 <h4 className="font-medium text-white mb-2">Subscription Details:</h4>
                 <p className="text-gray-400 text-sm mb-4">
-                  Payment of 3 SOL is required daily to maintain access to all services.
+                  Payment of 1.50 SOL is required daily to maintain access to all services.
                 </p>
                 <div className="bg-purple-900/30 rounded-lg p-4 mb-4">
                   <p className="text-sm text-gray-300 mb-2">Send daily payments to:</p>
